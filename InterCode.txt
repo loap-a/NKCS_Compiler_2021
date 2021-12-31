@@ -1,0 +1,122 @@
+FUNCTION main :
+temp0 := #2
+var0 := temp0
+temp1 := CALL read
+var0 := temp1
+temp2 := #100
+temp3 := var0 + temp2
+temp4 := #2
+temp5 := temp3 % temp4
+ARG temp5
+CALL print
+temp6 := #0
+var1 := temp6
+temp7 := #3
+var2 := temp7
+temp8 := #1
+var3 := temp8
+LABEL label0 :
+temp9 := #0
+temp10 := var2 > temp9
+IF var2 > temp9 GOTO label1
+GOTO label2
+LABEL label1 :
+temp11 := var3 * var2
+var3 := temp11
+temp12 := #1
+temp13 := var2 - temp12
+var2 := temp13
+GOTO label0
+LABEL label2 :
+temp14 := #100
+temp15 := var3 % temp14
+ARG temp15
+CALL print
+temp16 := #0
+var4 := temp16
+LABEL label3 :
+temp17 := #100
+temp18 := var3 % temp17
+temp19 := #1
+temp20 := temp18 - temp19
+temp21 := var4 < temp20
+IF var4 < temp20 GOTO label4
+GOTO label5
+LABEL label4 :
+temp22 := #1
+temp23 := var4 + temp22
+var5 := temp23
+LABEL label6 :
+temp24 := #100
+temp25 := var3 % temp24
+temp26 := #1
+temp27 := temp25 - temp26
+temp28 := var5 < temp27
+IF var5 < temp27 GOTO label7
+GOTO label8
+LABEL label7 :
+temp29 := #5
+temp30 := var5 - temp29
+temp31 := temp30 == var4
+IF var4 == #0 GOTO label9
+GOTO label10
+LABEL label9 :
+temp32 := #1
+GOTO label11
+LABEL label10 :
+temp32 := #0
+LABEL label11 :
+temp33 := #2
+temp34 := temp32 + temp33
+temp35 := temp34 == var5
+temp36 := #3
+temp37 := var5 - temp36
+temp38 := temp37 == var4
+temp39 := temp35 && temp38
+temp40 := temp31 || temp39
+IF temp31 || temp39 GOTO label12
+GOTO label13
+LABEL label12 :
+temp41 := #1
+temp42 := var4 + temp41
+temp43 := var5 % temp42
+var1 := temp43
+ARG var1
+CALL print
+GOTO label14
+LABEL label13 :
+temp44 := #3
+temp45 := var4 + temp44
+temp46 := var5 == temp45
+temp47 := #2
+temp48 := var5 % temp47
+temp49 := #0
+temp50 := temp48 == temp49
+temp51 := temp46 && temp50
+IF temp46 && temp50 GOTO label15
+GOTO label16
+LABEL label15 :
+temp52 := #1
+temp53 := var4 + temp52
+temp54 := var5 / temp53
+var1 := temp54
+ARG var1
+CALL print
+GOTO label17
+LABEL label16 :
+ARG var1
+CALL print
+LABEL label17 :
+LABEL label14 :
+temp56 := #1
+temp55 := var5
+var5 := var5 + temp56
+GOTO label6
+LABEL label8 :
+temp57 := #1
+temp58 := var4 + temp57
+var4 := temp58
+GOTO label3
+LABEL label5 :
+temp59 := #0
+RETURN temp59
